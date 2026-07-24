@@ -27,7 +27,7 @@ Output:
 
 Terminal command to run this file from the root project folder:
 
-uv run python -m bizintel.dw_create_wmiller
+uv run python -m bizintel.dw_create_case_wmiller
 
 OBS:
   Don't edit this file - it should remain a working example.
