@@ -365,3 +365,32 @@
 2026-07-23 21:38:35 | INFO | BI | Connecting to DuckDB data warehouse........
 2026-07-23 21:38:35 | INFO | BI | CALL a function to load customers........
 2026-07-23 21:38:35 | INFO | BI | Loading customers into dim_customers
+2026-07-23 21:40:08 | INFO | BI | === RUN START ===
+2026-07-23 21:40:08 | INFO | BI | project=BI
+2026-07-23 21:40:08 | INFO | BI | repo_dir=bintel-03-warehouse
+2026-07-23 21:40:08 | INFO | BI | python=3.14.6
+2026-07-23 21:40:08 | INFO | BI | os=Windows 11
+2026-07-23 21:40:08 | INFO | BI | shell=powershell
+2026-07-23 21:40:08 | INFO | BI | cwd=.
+2026-07-23 21:40:08 | INFO | BI | github_actions=False
+2026-07-23 21:40:08 | INFO | BI | ========================
+2026-07-23 21:40:08 | INFO | BI | START main()
+2026-07-23 21:40:08 | INFO | BI | ========================
+2026-07-23 21:40:08 | INFO | BI | Prepared data: = data\prepared
+2026-07-23 21:40:08 | INFO | BI | Data warehouse: = artifacts\smart_sales_w.duckdb
+2026-07-23 21:40:08 | INFO | BI | CALL a function to load each prepared dataset.............
+2026-07-23 21:40:08 | INFO | BI | Loading customers prepared from data\prepared\customers_data_prepared.csv
+2026-07-23 21:40:08 | INFO | BI | Loaded: 201 rows, 6 columns
+2026-07-23 21:40:08 | INFO | BI | Loading products prepared from data\prepared\products_data_prepared.csv
+2026-07-23 21:40:08 | INFO | BI | Loaded: 100 rows, 6 columns
+2026-07-23 21:40:08 | INFO | BI | Loading sales prepared from data\prepared\sales_data_prepared.csv
+2026-07-23 21:40:08 | INFO | BI | Loaded: 2391 rows, 9 columns
+2026-07-23 21:40:08 | INFO | BI | ========================
+2026-07-23 21:40:08 | INFO | BI | ROW COUNTS BEFORE LOAD
+2026-07-23 21:40:08 | INFO | BI | ========================
+2026-07-23 21:40:08 | INFO | BI |   Customers: 201 rows
+2026-07-23 21:40:08 | INFO | BI |   Products:  100 rows
+2026-07-23 21:40:08 | INFO | BI |   Sales:     2391 rows
+2026-07-23 21:40:08 | INFO | BI | Connecting to DuckDB data warehouse........
+2026-07-23 21:40:08 | INFO | BI | CALL a function to load customers........
+2026-07-23 21:40:08 | INFO | BI | Loading customers into dim_customers

@@ -5,7 +5,6 @@ CustomerID,Name,Region,JoinDate,RewardPoints,RewardLevel
 1003,David Brennan,North,5/21/2020,358344,Platinum
 1004,Kerry Collins,North,9/12/2023,115318,Silver
 1005,Jessica Mora,South,8/5/2021,13802,Bronze
-1005,Jessica Mora,South,8/5/2021,218168,Silver
 1006,Hannah Ray,West,7/3/2021,282752,Silver
 1007,David Kim,West,5/20/2020,188288,Silver
 1008,William Ramirez,East,9/15/2023,317837,Platinum
