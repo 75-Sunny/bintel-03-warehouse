@@ -126,12 +126,12 @@ def load_customers(
     conn.execute("""
         INSERT INTO dim_customers
         SELECT
-            customer_id,
-            customer_name,
-            region,
-            join_date,
-            reward_points,
-            reward_level
+            CustomerID,
+            Name,
+            Region,
+            JoinDate,
+            RewardPoints,
+            RewardLevel
         FROM df
     """)
 
@@ -162,12 +162,12 @@ def load_products(
     conn.execute("""
         INSERT INTO dim_products
         SELECT
-            product_id,
-            product_name,
-            category,
-            unit_price,
-            supplier,
-            supplier_id
+            ProductID,
+            ProductName,
+            Category,
+            UnitPrice,
+            Supplier,
+            SupplierID
         FROM df
     """)
 
@@ -203,15 +203,15 @@ def load_sales(
     conn.execute("""
         INSERT INTO fact_sales
         SELECT
-            transaction_id,
-            sale_date,
-            customer_id,
-            product_id,
-            store_id,
-            campaign_id,
-            sale_amount,
-            sale_type,
-            reward_points_earned
+            TransactionID,
+            SaleDate,
+            CustomerID,
+            ProductID,
+            StoreID,
+            CampaignID,
+            SaleAmount,
+            SaleType,
+            EarnedRewardPoints
         FROM df
     """)
 
