@@ -25,15 +25,14 @@ Describe your small technical modification to the example project.
 
 Include:
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+-I added my two new columns to create my tables in the warehouse.
+
 
 Compared with the example project,
-explain what is different and why the change matters.
+This matters, because not all databases will have the same tables and field attributes.
 
 Was it easy, or surprisingly challenging and why do you think so?
+This was pretty straightforward and familiar.
 
 ## Phase 5. Custom Project
 
@@ -45,9 +44,15 @@ Describe the prepared data you loaded into the warehouse.
 
 Include:
 
-- The three prepared data files and what each contains
-- Any assumptions or decisions made during preparation
-- The warehouse file location and format
+- customers_data_prepared.csv -
+    CustomerID	Name	Region	JoinDate	RewardPoints	RewardLevel
+
+- products_data_prepared.csv
+    ProductID	ProductName	Category	UnitPrice	Supplier	SupplierID
+
+- sales_data_prepared.csv
+    TransactionID	SaleDate	CustomerID	ProductID	StoreID	CampaignID	SaleAmount	SaleType	EarnedRewardPoints
+
 
 ### Warehouse Design
 
@@ -55,31 +60,30 @@ Describe your star schema design.
 
 Include:
 
-- Your fact table and its columns
-- Your dimension tables and their columns
-- Your primary and foreign key relationships
-- Why a star schema fits this data
+- fact_sales
+-  transaction_id       integer not null │
+│ sale_date            date             │
+│ customer_id          integer not null │
+│ product_id           integer not null │
+│ store_id             integer          │
+│ campaign_id          integer          │
+│ sale_amount          decimal          │
+│ sale_type            varchar          │
+│ reward_points_earned integer
 
-### ETVL Process
+- dim_customers
+- customer_id   integer not null │
+│ customer_name varchar          │
+│ region        varchar          │
+│ join_date     date             │
+│ reward_points integer          │
+│ reward_level  varchar
 
-Describe your extract, transform, verify, and load steps.
 
-Include:
-
-- How you extracted data from the prepared CSV files
-- Any transformations applied before loading
-- How you verified the data loaded correctly
-- What the row counts confirmed
-
-### Summary
-
-Summarize your custom warehouse work.
-
-Include:
-
-- What you implemented beyond the example
-- What the warehouse contains
-- What you learned about data warehouse design
-- What kinds of real business problems a data warehouse enables
-
-Display at least one screenshot of your populated warehouse tables.
+- dim_products
+-  product_id   integer not null │
+│ product_name varchar          │
+│ category     varchar          │
+│ unit_price   decimal          │
+│ supplier     varchar          │
+│ supplier_id  integer
